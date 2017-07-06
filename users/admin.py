@@ -20,12 +20,15 @@ class UserAdmin(admin.ModelAdmin):
 
     def get_location(self, instance):
         return instance.profilemodel.district
-    get_location.short_description = 'Location'
+    get_location.short_description = '地区'
+    def get_chg_times(self, instance):
+        return instance.profilemodel.chg_times
+    get_chg_times.short_description = '可修改次数'
     def get_inline_instances(self, request, obj=None):
         if not obj:
             return list()
         return super(UserAdmin, self).get_inline_instances(request, obj)
-    list_display = ('name', 'premium', 'fee', 'phone', 'phone_district', 'get_location')
+    list_display = ('name', 'premium', 'fee', 'phone', 'phone_district', 'get_location','get_chg_times')
     list_filter=('fee', 'premium', 'profilemodel__district')
     search_fields = ('name', 'phone')
 
