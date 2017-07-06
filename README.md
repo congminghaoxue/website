@@ -13,3 +13,18 @@ conda config --add channels bioconda
 ``` conda install --file requirements.txt ```
 
 
+### 测试
+
+1. siege
+
+```
+siege  -c 20 -r 1 "http://localhost/users/users/"
+```
+
+2. wrk
+
+```
+wrk -t12 -c400 -d30s http://localhost/users/users/
+```
+
+
