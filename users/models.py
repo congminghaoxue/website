@@ -1,6 +1,9 @@
 from django.db import models
 
 # Create your models here.
+
+
+
 class UserModel(models.Model):
     """docstring for UserModel"""
     # def __init__(self, arg):
@@ -22,3 +25,17 @@ class UserModel(models.Model):
         verbose_name = '用户信息统计'
         verbose_name_plural = '用户信息统计'
 
+
+
+
+class ProfileModel(models.Model):
+    """docstring for ProfileModel"""
+    user = models.OneToOneField(UserModel, on_delete=models.CASCADE)
+    district = models.CharField(verbose_name='地区', max_length=254)
+    class Meta(object):
+        """docstring for Meta"""
+        def __init__(self, arg):
+            super(Meta, self).__init__()
+            self.arg = arg
+
+        db_table = 'profiles'
