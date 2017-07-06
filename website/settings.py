@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '*+*8lea%biw1%41=wmjcbks2*7o+apj0-e%-_lrw)*wn*pa5k%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -90,7 +90,7 @@ DATABASES = {
         # 'HOST': 'easygaokao.com',
         # 'PORT': '3306',
         'OPTIONS': {
-            'read_default_file': os.path.join(BASE_DIR,'my.cnf'),
+            'read_default_file': os.path.join(BASE_DIR, 'my.cnf'),
             'init_command': 'SET default_storage_engine=INNODB',
         },
     }
