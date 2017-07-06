@@ -1,4 +1,4 @@
 django
 tornado
 gunicorn
-PyMySQL
+mysqlclient=1.3.10
