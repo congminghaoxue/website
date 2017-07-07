@@ -29,7 +29,7 @@ class UserAdmin(admin.ModelAdmin):
             return list()
         return super(UserAdmin, self).get_inline_instances(request, obj)
     list_display = ('name', 'premium', 'fee', 'phone', 'phone_district', 'get_location','get_chg_times')
-    list_filter=('fee', 'premium', 'profilemodel__district')
+    list_filter=('fee', 'premium', 'profilemodel__district', 'profilemodel__chg_times')
     search_fields = ('name', 'phone')
 
 admin.site.register(UserModel, UserAdmin)
