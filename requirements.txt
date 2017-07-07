@@ -1,5 +1,4 @@
-django
-tornado
-gunicorn
-mysqlclient
-cherrypy
+Django==1.11.3
+bjoern==1.4.3
+cherrypy==10.2.2
+tornado==4.5.1
