@@ -2,3 +2,5 @@ bjoern
 cherrypy
 tornado
 gunicorn
+uwsgi
+Twisted
