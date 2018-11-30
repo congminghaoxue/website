@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from tornado import httpserver, ioloop, wsgi
 
-from website.wsgi import application
+from app import application
 
 container = wsgi.WSGIContainer(application)
 server = httpserver.HTTPServer(container)

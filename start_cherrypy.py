@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-from cherrypy import wsgiserver
+from cheroot import wsgi
 
-from website.wsgi import application
+from app import application
 
-server = wsgiserver.CherryPyWSGIServer(
+server = wsgi.Server(
     ('0.0.0.0', 8888), application, numthreads=10)
 try:
     server.start()
