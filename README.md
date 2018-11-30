@@ -18,13 +18,13 @@ conda config --add channels bioconda
 1. siege
 
 ```
-siege  -c 20 -r 1 "http://localhost/users/users/"
+siege  -c 20 -r 1 "http://localhost:8888"
 ```
 
 2. wrk
 
 ```
-wrk -t12 -c400 -d30s http://localhost/users/users/
+wrk -t12 -c400 -d30s http://localhost:8888
 ```
 
 
